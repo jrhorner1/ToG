@@ -1,0 +1,56 @@
+
+\pagestyle{plain}
+
+% ignore slightly overfull hboxes
+\hfuzz=20pt
+\vfuzz=20pt
+\hbadness=2000
+\vbadness=\maxdimen
+
+\usepackage[english, provide=*]{babel}
+
+\usepackage{libertinus}
+\usepackage[T1]{fontenc}
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+\sffamily
+
+\usepackage{ragged2e}
+
+\usepackage[vcentering,dvips]{geometry}
+\geometry{
+  papersize={5.5in,8.25in},
+  total={4.5in,7.25in}
+  }
+
+\usepackage{graphicx}
+\graphicspath{images/}
+
+\usepackage{tikz}
+\usepackage{bookmark}
+
+\usepackage{soul}
+
+\hypersetup{hidelinks}
+\usepackage{titlesec, titletoc}
+
+\titleformat{\chapter} % command
+[display] % shape
+{\bfseries\Large\itshape} % format
+{} % label
+{0.5ex} % sep
+{\begin{Center}} % before-code
+[\end{Center}] % after-code
+
+\titlecontents{chapter}
+[0pt] % left
+{} % above-code
+{\contentsmargin{0pt} Chapter \normalsize} % numbered-entry format
+{\contentsmargin{0pt} \normalsize} % numberless-entry format
+{\hfill \contentspage} % filler-page format
+[] % below-code
+
+\newcommand{\blankpage}{%
+  \null   \thispagestyle{empty}%
+  \addtocounter{page}{-1}%
+  \newpage
+}

@@ -1,0 +1,12 @@
+
+\pdfpagewidth=11in \pdfpageheight=8.25in
+\eject
+\noindent\makebox[\textwidth]{
+  \AddToHookNext{shipout/background}{
+    \begin{tikzpicture}[remember picture,overlay]
+    \node at (current page.east) {
+      \includegraphics[width=11in]{images/map}
+    };
+    \end{tikzpicture}
+  }
+}
